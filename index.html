@@ -7,6 +7,29 @@
     <script src="app.js"></script>
     <title>Calculator</title>
 </head>
+<script>
+    document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    
+    // Check if the pressed key is a number or an operator
+    if (!isNaN(key) || key === '.' || key === '+' || key === '-' || key === '*' || key === '/') {
+        // If it's a number or operator, trigger the corresponding function
+        if (key === '.') {
+            appendInput('.');
+        } else if (!isNaN(key)) {
+            appendInput(key);
+        } else {
+            setOperator(key);
+        }
+    } else if (key === 'Enter') {
+        // If Enter key is pressed, calculate the result
+        calculate();
+    } else if (key === 'Escape') {
+        // If Escape key is pressed, clear the calculator
+        clearCalculator();
+    }
+});
+</script>
 <body>
     <div class="parent">
        <div class="calculator-body">
