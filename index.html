@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="parent">
+       <div class="calculator-body">
+            <input type="text" id="textInput" class="calculator-input">
+            <div class="all-inputs">
+            <button class="inputs" value="1" onclick="appendInput('1')">1</button>
+            <button class="inputs" value="2" onclick="appendInput('2')">2</button>
+            <button class="inputs" value="3" onclick="appendInput('3')">3</button>
+            <button class="inputs" value="+" onclick="setOperator('+')">+</button>
+            <button class="inputs" value="4" onclick="appendInput('4')">4</button>
+            <button class="inputs" value="5" onclick="appendInput('5')">5</button>
+            <button class="inputs" value="6" onclick="appendInput('6')">6</button>
+            <button class="inputs" value="-" onclick="setOperator('-')">-</button>
+            <button class="inputs" value="7" onclick="appendInput('7')">7</button>
+            <button class="inputs" value="8" onclick="appendInput('8')">8</button>
+            <button class="inputs" value="9" onclick="appendInput('9')">9</button>
+            <button class="inputs" value="/" onclick="setOperator('/')">/</button>
+            <button class="inputs" value="0" onclick="appendInput('0')">0</button>           
+            <button class="inputs" onclick="clearCalculator()">AC</button>
+            <button class="inputs" value="=" onclick="calculate()">=</button>
+            <button class="inputs" value="*" onclick="setOperator('*')">X</button>
+        </div>
+       </div>
+    </div>
+    
+</body>
+</html>
